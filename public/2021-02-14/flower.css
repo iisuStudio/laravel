@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: -webkit-radial-gradient( left bottom, circle farthest-corner, #ffd2d2, #eed2d2);
+    background: -moz-radial-gradient( left bottom, circle farthest-corner, #ffd2d2, #eed2d2);
+    background: -ms-radial-gradient( left bottom, circle farthest-corner, #ffd2d2, #eed2d2);
+    background: -o-radial-gradient( left bottom, circle farthest-corner, #ffd2d2, #eed2d2);
+    background: radial-gradient( farthest-corner circle at left bottom, #ffd2d2, #eed2d2);
+  }
+
+  .fancybox-bg {
+      background-color: transparent;
+  }
+  .fancybox-image, .fancybox-spaceball {
+    background: #ffddee;
+  }

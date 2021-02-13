@@ -1,0 +1,53 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>我的卡片</title>
+    
+    <link rel="stylesheet" href="./style.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="./jquery.fancybox.min.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="./flower.css" media="screen" type="text/css">
+    </head>
+    
+    <body>
+    
+    <div class="container">
+        <div class="folder">
+            <div class="paper">
+                <h1>to: 親愛的 羽羽</h1>
+            </div>
+            <div class="cover">
+                <div class="title">點擊信封打開</div>
+            </div>
+        </div>
+        <div class="sticky">
+            <img src="./heart-sticky.png">
+        </div>
+        <canvas id='c'></canvas>
+    </div>
+    
+    <script type="text/javascript" src="./jquery.js"></script>
+    <script type="text/javascript" src="./jquery.fancybox.min.js"></script>
+    <script type="text/javascript" src="./flower.js"></script>
+    <script type="text/javascript">
+    $(document).on('click', '.folder', function() {
+      $(this).toggleClass('opened');
+      if($(this).hasClass('opened')) {
+            window.setTimeout(function() {
+                $.fancybox.open({ src: './情人節卡片.png', type : 'image' }); 
+            }, 1000);
+            window.setTimeout(function() {
+                requestId = window.requestAnimationFrame(update);
+            }, 3000);
+            window.setTimeout(function() {
+                if (requestId) {
+                    window.cancelAnimationFrame(requestId)
+                };
+                console.log("cancelAnimationFrame")
+            }, 9000)
+        }
+    });
+    </script>
+    
+    
+    
+    </body>
+</html>
